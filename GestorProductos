@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+namespace GestionProducto
+{
+    class Producto
+    {
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+        public int Precio { get; set; }
+        public int Inventario { get; set; }
+        List<string> Clientes { get; set; }
+        public Producto(int Codigo, string Nombre, int Precio, int Inventario, List<string> Clientes)
+        {
+            this.Codigo = Codigo;
+            this.Nombre = Nombre;
+            this.Precio = Precio;
+            this.Inventario = Inventario;
+            this.Clientes = Clientes;
+        }
+        public void Mostrar(int Codigo, string Nombre, int Precio, int Inventario){
+            System.Console.WriteLine($"Codigo:{Codigo}");
+            System.Console.WriteLine($"Nombre:{Nombre}");
+            System.Console.WriteLine($"Precio:{Precio}");
+            System.Console.WriteLine($"Inventario:{Inventario}");
+
+        }
+        public void ActualizarPrecio(int NuevoPrecio){
+            this.Precio=NuevoPrecio;
+        }
+        public void ActualizarInventario(int NuevoInventario){
+            this.Inventario=NuevoInventario;
+        }
+}
+}
